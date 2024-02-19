@@ -6,4 +6,4 @@ steps:
     args: ['push', 'us-central1-docker.pkg.dev/abiding-result-412222/nyande-100942795/my-image:$COMMIT_SHA']
 
 options:
-  defaultLogsBucket: 'REGIONAL_USER_OWNED_BUCKET'
+  defaultLogsBucketBehavior: 'REGIONAL_USER_OWNED_BUCKET'
