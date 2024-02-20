@@ -17,7 +17,7 @@ WORKDIR /assignment2
 USER node
 
 # Copy the package.json file from the "Assignment 1 Files" directory to the "/assignment2" directory
-COPY --chown=node:node package.json /assignment2/package.json
+COPY --chown=node:node Assignment\ 2\ Files/Assignment\ 1\ Files/package.json /assignment2/package.json
 
 # Run the npm install command to install your node.js packages
 RUN npm install
