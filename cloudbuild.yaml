@@ -8,7 +8,6 @@ steps:
 options:
   defaultLogsBucketBehavior: 'REGIONAL_USER_OWNED_BUCKET'
 
-# Deploy the Docker container to Google Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'sh'
     args: 
