@@ -19,9 +19,6 @@ USER node
 # Copy the package.json file from the root directory to the "/assignment2" directory
 COPY --chown=node:node package.json /assignment2/package.json
 
-# Copy the index.js file from the "src" directory to the "/assignment2/src" directory
-COPY --chown=node:node src/index.js /assignment2/src/index.js
-
 # Run the npm install command to install your node.js packages
 RUN npm install
 
