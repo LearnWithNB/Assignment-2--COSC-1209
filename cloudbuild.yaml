@@ -4,11 +4,8 @@ steps:
   
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'us-central1-docker.pkg.dev/abiding-result-412222/nyande-100942795/nodejs-app:${COMMIT_SHA}']
-
-options:
-  defaultLogsBucketBehavior: 'REGIONAL_USER_OWNED_BUCKET'
-
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'sh'
     args: 
       - '-c'
@@ -19,5 +16,8 @@ options:
           --region=us-central1 \
           --port=3000 \
           --allow-unauthenticated
+options:
+  defaultLogsBucketBehavior: 'REGIONAL_USER_OWNED_BUCKET'
+  
 images:
    - 'us-central1-docker.pkg.dev/abiding-result-412222/nyande-100942795/nodejs-app:${COMMIT_SHA}'
